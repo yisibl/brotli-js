@@ -1,0 +1,31 @@
+{
+  "name": "@brotli/brotli-js-linux-arm-gnueabihf",
+  "version": "1.0.0",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "arm"
+  ],
+  "main": "brotlijs.linux-arm-gnueabihf.node",
+  "files": [
+    "brotlijs.linux-arm-gnueabihf.node"
+  ],
+  "description": "Google brotli binding to Node.js via Rust and napi-rs",
+  "keywords": [
+    "brotli",
+    "compression",
+    "decompression",
+    "encode",
+    "decode"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": "git@github.com:yisibl/brotli-js.git"
+}

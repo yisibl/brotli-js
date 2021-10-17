@@ -1,0 +1,31 @@
+{
+  "name": "@brotli/brotli-js-android-arm64",
+  "version": "1.0.0",
+  "os": [
+    "android"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "main": "brotlijs.android-arm64.node",
+  "files": [
+    "brotlijs.android-arm64.node"
+  ],
+  "description": "Google brotli binding to Node.js via Rust and napi-rs",
+  "keywords": [
+    "brotli",
+    "compression",
+    "decompression",
+    "encode",
+    "decode"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": "git@github.com:yisibl/brotli-js.git"
+}

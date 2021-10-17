@@ -1,0 +1,26 @@
+[package]
+name = "brotli-js"
+version = "1.0.0"
+authors = ["yisibl <percyley@qq.com>"]
+license = "MIT"
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+napi = { version = "2.0.0-alpha.0", features = ["serde-json"] }
+napi-derive = { version = "2.0.0-alpha.0" }
+serde = { version = "1", features = ["derive"] }
+
+brotli = "3.3"
+
+[build-dependencies]
+napi-build = "1"
+
+[profile.release]
+lto = true # Enable Link Time Optimization
+opt-level = 3
+# Setting this to 1 may improve the performance of generated code, but may be slower to compile.
+# https://doc.rust-lang.org/rustc/codegen-options/index.html#codegen-units
+codegen-units = 1
