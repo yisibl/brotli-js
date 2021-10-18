@@ -1,8 +1,9 @@
-#![deny(clippy::all)]
-
 use brotli;
 use napi::bindgen_prelude::*;
 use napi_derive::napi;
+
+// #[global_allocator]
+// static ALLOC: mimalloc_rust::GlobalMiMalloc = mimalloc_rust::GlobalMiMalloc;
 
 #[napi]
 pub fn compress(buffer: Buffer) -> Buffer {

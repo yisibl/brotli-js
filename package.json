@@ -5,13 +5,7 @@
   "main": "index.js",
   "repository": "git@github.com:yisibl/brotli-js.git",
   "license": "MIT",
-  "keywords": [
-    "brotli",
-    "compression",
-    "decompression",
-    "encode",
-    "decode"
-  ],
+  "keywords": ["brotli", "compression", "decompression", "encode", "decode"],
   "files": ["index.d.ts", "index.js"],
   "napi": {
     "name": "brotlijs",

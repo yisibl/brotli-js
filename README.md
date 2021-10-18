@@ -4,7 +4,8 @@
 
 Google brotli binding to Node.js via Rust and napi-rs
 
-- Fast, safe and zero dependencies!
+> This library is mainly used to test the performance of napi-rs v2. For actual development, please use the `zlib.brotliCompress()` method that comes with Node.js.
+
 - Cross-platform support, including [Apple M1](https://www.apple.com/newsroom/2020/11/apple-unleashes-m1/).
 - No need for node-gyp and postinstall, the `.node` file has been compiled for you.
 
@@ -42,6 +43,22 @@ pnpm i @brotli/brotli-js
 |                  |
 | Android arm64    | ✓      | ✓      | ✓      | [![npm version](https://img.shields.io/npm/v/@brotli/brotli-js-android-arm64.svg?sanitize=true)](https://www.npmjs.com/package/@brotli/brotli-js-android-arm64)             |
 |                  |
+
+## benchmarks
+
+```shell
+npm run bench
+
+Running "1024 Bytes" suite...
+  zlib(Native):
+    262 ops/s, ±6.68%   | fastest
+
+  iltorb(C++):
+    248 ops/s, ±3.40%   | 5.34% slower
+
+  brotli-js(Rust):
+    115 ops/s, ±1.74%   | slowest, 56.11% slower
+```
 
 ## Build
 

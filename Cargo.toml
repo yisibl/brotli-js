@@ -12,8 +12,10 @@ crate-type = ["cdylib"]
 napi = { version = "2.0.0-alpha.0", features = ["serde-json"] }
 napi-derive = { version = "2.0.0-alpha.0" }
 serde = { version = "1", features = ["derive"] }
+brotli = { version = "3.3", features = ["simd"], git = "https://github.com/billyb2/rust-brotli.git", branch = "master" }
 
-brotli = "3.3"
+# [target.'cfg(all(target_arch = "x86_64", not(target_env = "musl")))'.dependencies]
+# mimalloc-rust = "0.1"
 
 [build-dependencies]
 napi-build = "1"
