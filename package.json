@@ -1,6 +1,6 @@
 {
   "name": "@brotli/brotli-js",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Google brotli binding to Node.js via Rust and napi-rs",
   "main": "index.js",
   "repository": "git@github.com:yisibl/brotli-js.git",
