@@ -9,8 +9,8 @@ edition = "2018"
 crate-type = ["cdylib"]
 
 [dependencies]
-napi = { version = "2.0.0-alpha.0", features = ["serde-json"] }
-napi-derive = { version = "2.0.0-alpha.0" }
+napi = { version = "2.0.0-alpha.1", features = ["serde-json", "async"] }
+napi-derive = { version = "2.0.0-alpha.1" }
 serde = { version = "1", features = ["derive"] }
 brotli = { version = "3.3", features = ["simd"], git = "https://github.com/billyb2/rust-brotli.git", branch = "master" }
 

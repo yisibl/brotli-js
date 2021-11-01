@@ -5,8 +5,17 @@
   "main": "index.js",
   "repository": "git@github.com:yisibl/brotli-js.git",
   "license": "MIT",
-  "keywords": ["brotli", "compression", "decompression", "encode", "decode"],
-  "files": ["index.d.ts", "index.js"],
+  "keywords": [
+    "brotli",
+    "compression",
+    "decompression",
+    "encode",
+    "decode"
+  ],
+  "files": [
+    "index.d.ts",
+    "index.js"
+  ],
   "napi": {
     "name": "brotlijs",
     "triples": {
@@ -48,7 +57,7 @@
     "version": "napi version"
   },
   "devDependencies": {
-    "@napi-rs/cli": "^2.0.0-alpha.2",
+    "@napi-rs/cli": "2.0.0-alpha.3",
     "@swc-node/register": "^1.3.5",
     "@types/benchmark": "^2.1.1",
     "@types/node": "^14.17.22",
@@ -76,14 +85,27 @@
     "@node-rs/helper": "^1.2.1"
   },
   "lint-staged": {
-    "*.@(js|ts|tsx)": ["prettier --write", "eslint -c .eslintrc.yml --fix"],
-    "*.@(yml|yaml)": ["prettier --parser yaml --write"],
-    "*.md": ["prettier --parser markdown --write"],
-    "*.json": ["prettier --parser json --write"]
+    "*.@(js|ts|tsx)": [
+      "prettier --write",
+      "eslint -c .eslintrc.yml --fix"
+    ],
+    "*.@(yml|yaml)": [
+      "prettier --parser yaml --write"
+    ],
+    "*.md": [
+      "prettier --parser markdown --write"
+    ],
+    "*.json": [
+      "prettier --parser json --write"
+    ]
   },
   "ava": {
-    "require": ["@swc-node/register"],
-    "extensions": ["ts"],
+    "require": [
+      "@swc-node/register"
+    ],
+    "extensions": [
+      "ts"
+    ],
     "environmentVariables": {
       "TS_NODE_PROJECT": "./tsconfig.json"
     }

@@ -23,8 +23,8 @@ async function run() {
       await compressIltorb(randomBytes(1), { quality: 11 })
     }),
 
-    b.add('brotli-js(Rust)', () => {
-      compressJs(randomBytes(1))
+    b.add('brotli-js(Rust)', async () => {
+      await compressJs(randomBytes(1))
     }),
 
     b.add('brotli-wasm', async () => {
@@ -46,8 +46,8 @@ async function run() {
       await compressIltorb(randomBytes(1024), { quality: 11 })
     }),
 
-    b.add('brotli-js(Rust)', () => {
-      compressJs(randomBytes(1024))
+    b.add('brotli-js(Rust)', async () => {
+      await compressJs(randomBytes(1024))
     }),
 
     // b.add('brotli-wasm', async () => {
@@ -69,8 +69,8 @@ async function run() {
       await compressIltorb(randomBytes(1024 * 1024), { quality: 11 })
     }),
 
-    b.add('brotli-js(Rust)', () => {
-      compressJs(randomBytes(1024 * 1024))
+    b.add('brotli-js(Rust)', async () => {
+      await compressJs(randomBytes(1024 * 1024))
     }),
 
     // b.add('brotli-wasm', async () => {

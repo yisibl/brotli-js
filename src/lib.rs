@@ -6,7 +6,7 @@ use napi_derive::napi;
 // static ALLOC: mimalloc_rust::GlobalMiMalloc = mimalloc_rust::GlobalMiMalloc;
 
 #[napi]
-pub fn compress(buffer: Buffer) -> Buffer {
+pub async fn compress(buffer: Buffer) -> Buffer {
   let mut output = Vec::<u8>::new();
   let mut params = brotli::enc::BrotliEncoderParams::default();
   params.quality = 11 as i32;
@@ -20,7 +20,7 @@ pub fn compress(buffer: Buffer) -> Buffer {
 }
 
 #[napi]
-pub fn decompress(buffer: Buffer) -> Buffer {
+pub async fn decompress(buffer: Buffer) -> Buffer {
   let mut output = Vec::<u8>::new();
 
   match brotli::BrotliDecompress(&mut buffer.as_ref(), &mut output) {
