@@ -4,8 +4,8 @@ const { performance } = require('perf_hooks')
 async function main() {
   const t0 = performance.now()
 
-  const compressedData = compress(Buffer.from('some input'))
-  const depressedData = decompress(compressedData) // => buffer
+  const compressedData = await compress(Buffer.from('some input'))
+  const depressedData = await decompress(compressedData) // => buffer
   const t1 = performance.now()
 
   console.log(Buffer.from(depressedData).toString('utf8')) // Prints 'some input'
